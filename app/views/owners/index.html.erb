@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Petclub</th>
+      <th>Pet Store</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
     <% @owners.each do |owner| %>
       <tr>
         <td><%= owner.name %></td>
-        <td><%= owner.petclub_id %></td>
+        <td><%= owner.petstore.name %></td>
         <td><%= link_to 'Show', owner %></td>
         <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
         <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>

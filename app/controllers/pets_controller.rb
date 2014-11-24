@@ -5,6 +5,7 @@ class PetsController < ApplicationController
   # GET /pets.json
   def index
     @pets = Pet.all
+  
   end
 
   # GET /pets/1
@@ -15,10 +16,13 @@ class PetsController < ApplicationController
   # GET /pets/new
   def new
     @pet = Pet.new
+    @owners = Owner.all
   end
 
   # GET /pets/1/edit
   def edit
+    
+    @owners = Owner.all
   end
 
   # POST /pets

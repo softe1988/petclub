@@ -15,10 +15,13 @@ class OwnersController < ApplicationController
   # GET /owners/new
   def new
     @owner = Owner.new
+    @petstores = Petstore.all
   end
 
   # GET /owners/1/edit
   def edit
+    
+    @petstores = Petstore.all  
   end
 
   # POST /owners
@@ -69,6 +72,6 @@ class OwnersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def owner_params
-      params.require(:owner).permit(:name, :petclub_id)
+      params.require(:owner).permit(:name, :petstore_id)
     end
 end
